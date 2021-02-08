@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+html(lang="cs")
+	head
+		meta(charset='UTF-8')
+		//- meta(name="viewport" content="initial-scale=.6, maximum-scale=1, minimum-scale=.7, user-scalable=0")
+		meta(name="viewport" content="initial-scale=1, user-scalable=1")
+		meta(name="description" content="Constitutional law")
+		meta(http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate")
+		meta(http-equiv="Pragma" content="no-cache")
+		meta(http-equiv="Expires" content="0")
+		title
+			block title
+				| #{site.title}
+		link(rel='stylesheet' href='css/style.css')
+		//- link(rel="stylesheet", href="slick/slick.css")
+		//- link(rel="stylesheet", href="slick/slick-theme.css")
+		//- link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
+	
+	block body
+	body.single
+		include partials/navbar.pug
+		block content
+		script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+		script(type="text/javascript", src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
+block footer
+	footer.footer.text-center.pt-gap
+		img(src="images/loga.png",alt="Logos of UCPH and European research concil")
+		p.mt-1
+			small This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No 803163) and is hosted by the University of Copenhagen.
+	script.
+
+		
+
+		//- window.addEventListener("load", res);
+		//- window.addEventListener("resize", res);
+
+		//- var body = document.getElementsByTagName("body")[0];
+
+		//- body.addEventListener("mousemove", setTimeout(fog, 2000))
+		//- function fog(){
+		//- 	alert('Hello');
+		//- }
+
+		//- causeRepaintsOn = $("html, body, h1, h2, h3, p");
+		//- $(window).resize(function() {   causeRepaintsOn.css("visibility", none); });
+
+
+		//- function res() {
+		//- 	var w = window.innerWidth;
+		//- 	var h = window.innerHeight;
+		//- 	var html = document.getElementsByTagName("html")[0];
+		//- 	var body = document.getElementsByTagName("body")[0];
+		//- 	var aspekt = w/h;
+			
+			
+			
+		//- 	if (aspekt>1.6){
+		//- 		//- console.log(w+","+h);	
+		//- 		html.style.fontSize = "10pt";	
+		//- 		body.style.fontSize = "10pt";
+		//- 		html.classList.remove("font-size");
+		//- 		body.classList.remove("font-size");
+		//- 		}
+		//- 	else {
+		//- 		html.classList.add("font-size");
+		//- 		body.classList.add("font-size");
+		//- 		}
+		//- }
+
+
+		$(document).ready(function(){
+		var page = window.location.pathname
+		var pagids = document.querySelectorAll(".nav-link");
+		console.log(page);
+		//- for (i = 0; i < pagids.length; i++) {
+			if ( page == "/imagine_dev/dist/about.html"){
+					$('#pageid'+0).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/people.html"){
+					$('#pageid'+1).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/events.html"){
+					$('#pageid'+2).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/publications.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/podcast-letters.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/podcast-sound.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/podcast-video.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/publications-working_papers.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/publications-books.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/publications-articles.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/publications-book_chapters.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/imagine_dev/dist/publications-other.html"){
+					$('#pageid'+3).addClass("active")
+				}
+
+			if ( page == "/imagine_dev/dist/podcast.html"){
+					$('#pageid'+4).addClass("active")
+				}
+			if ( page == "/about.html"){
+					$('#pageid'+0).addClass("active")
+				}
+			if ( page == "/people.html"){
+					$('#pageid'+1).addClass("active")
+				}
+			if ( page == "/events.html"){
+					$('#pageid'+2).addClass("active")
+				}
+			if ( page == "/publications.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/podcast.html"){
+					$('#pageid'+4).addClass("active")
+				}
+			if ( page == "/podcast-letters.html"){
+					$('#pageid'+4).addClass("active")
+				}
+			if ( page == "/podcast-sound.html"){
+					$('#pageid'+4).addClass("active")
+				}
+			if ( page == "/podcast-videos.html"){
+					$('#pageid'+4).addClass("active")
+				}
+			if ( page == "/publications-working_papers.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/publications-books.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/publications-articles.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/publications-book_chapters.html"){
+					$('#pageid'+3).addClass("active")
+				}
+			if ( page == "/publications-other.html"){
+					$('#pageid'+3).addClass("active")
+				}
+
+
+			
+		});

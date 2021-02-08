@@ -1,0 +1,18 @@
+extends layout.pug
+block body
+	body.about
+block content
+	main.main
+		article#content
+			p.mt-0 !{about.content}
+			.hashtags
+				nav.nav-menu(arial-label="site")
+					ul.navbar-nav.p-0(role="list")
+						each item in hashideas
+							li.nav-item.p-0(role="listitem")
+								a.nav-link.tags(href=item.link + ".html") #{item.name}
+					ul.navbar-nav.p-0(role="list")
+						each item in hashformal
+							li.nav-item.p-0(role="listitem")
+								a.nav-link.category(href=item.link + ".html").category #{item.name}
+					

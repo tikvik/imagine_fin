@@ -1,0 +1,54 @@
+extends layout.pug
+block body
+	body.events
+block content
+	main#content
+		- var i = 0
+		each proj, index in projects
+			if proj.project[0].category == "working papers"
+				if i == 1		
+					include partials/article.pug
+					section.read-more
+						a.btn2(href="publications-working_papers.html") Read more from #{proj.project[0].category}
+				- i = i + 1
+		-i = 0
+		each proj, index in projects
+			if proj.project[0].category == "books"
+				if i == 1		
+					include partials/article.pug
+					section.read-more
+						a.btn2(href="publications-books.html") Read more from #{proj.project[0].category}
+				- i = i + 1
+		-i = 0
+		each proj, index in projects
+			if proj.project[0].category == "articles"
+				if i == 1		
+					include partials/article.pug
+					section.read-more
+						a.btn2(href="publications-articles.html") Read more from #{proj.project[0].category}
+				- i = i + 1
+
+		-i = 0
+		each proj, index in projects
+			if proj.project[0].category == "book chapters"
+				if i == 1		
+					include partials/article.pug
+					section.read-more
+						a.btn2(href="publications-book_chapters.html") Read more from #{proj.project[0].category}
+				- i = i + 1
+
+		-i = 0
+		each proj, index in projects
+			if proj.project[0].category == "other"
+				if i == 1		
+					include partials/article.pug
+					section.read-more
+						a.btn2(href="publications-other.html") Read more from #{proj.project[0].category}
+				- i = i + 1
+		-i = 0
+
+		
+
+
+
+

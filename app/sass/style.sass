@@ -1,0 +1,268 @@
+@import "imports.sass"
+
+@include font('RobotoMono-Regular', '/imagine/fonts/RobotoMono/', '.ttf');
+@include font('MunkenSansWeb-Regular', '/imagine/fonts/MunkenSans/', '.woff');
+@include font('MunkenSansWeb-Bold', '/imagine/fonts/MunkenSans/', '.woff');
+// @include font('Roboto_Mono', 'https://tikvik.github.io/rcnkskweb/dist/fonts/')
+
+
+
+// .font-size
+// 	font-size: $font-size-sm !important
+// 	@include for-size(sm)
+// 		font-size: $font-size !important
+
+html,body
+	// font-size: $font-size-sm
+	// @include for-size(sm)
+	// 	font-size: $font-size
+	font-family: RobotoMono-Regular
+
+
+
+html
+	font-size: 15px
+
+@media screen and (min-width: 320px)
+	html
+    	font-size: calc(8px + 6 * ((100vw - 320px) / 680))
+
+@media screen and (min-width: 1000px) 
+	html 
+		font-size: 16px
+  
+
+
+
+h1,h2,h3,h4,h5,.perex,.nav-link
+	font-family: MunkenSansWeb-Bold
+	line-height: 1
+	font-weight: bold
+	letter-spacing: -1px
+
+
+.title
+	font-size: $title-font-size-xs
+	@include for-size(sm)
+		font-size: $title-font-size
+
+	
+.title
+	padding-top: $gap*5
+	@include for-size(sm)
+		padding-top: $gap*3
+h2.subtitle
+	font-size: $subtitle-font-size
+	padding: $gap/2 0 $gap*1.7 0
+	font-weight: bold
+.perex
+	font-size: $perex-font-size
+	margin-right: 8px
+
+.klasik
+	font-size: initial
+
+
+#content
+	min-height: 48vh
+@include for-size(md)
+	#nav
+		padding: 0 $gap 
+		max-width: $wrap-width
+		@include for-size(xl)
+			max-width: 1500px
+		margin-left: auto
+		margin-right: auto
+
+		ul.navbar-nav
+			padding: $gap*4 0 $gap*4 0
+			margin: 0
+			display: flex
+			flex-wrap: nowrap
+			justify-content: space-between
+			li.nav-item
+				display: flex
+				text-transform: uppercase
+				font-size: $navitem-font-size
+				padding: $gap/4 0 $gap/4 0
+				a
+					padding: $gap/1.5 $gap $gap/2 $gap
+
+
+
+@include for-size-down(md)	
+	#nav
+		-webkit-user-select: none
+		display: block
+		overflow-y: hidden
+		position: relative
+		-webkit-overflow-scrolling: touch
+		overflow-x: auto
+		margin-left: $gap
+		ul.navbar-nav
+			display: inline-block
+			white-space: nowrap
+			overflow: hidden
+			padding: $gap*4 0 $gap*4 0
+			margin: 0
+			// position: relative
+			// &::before
+			// 	content: ""
+			// 	left: 80%
+			// 	top: 0
+			// 	background-image: linear-gradient(to right, rgba(255,255,255,0), white)
+			// 	width: 200px
+			// 	height: 100px
+			// 	position: absolute
+			li.nav-item
+				text-transform: uppercase
+				display: inline-block
+				font-size: $navitem-font-size
+				text-align: center
+				a
+					padding: $gap/1.5 $gap $gap/2 $gap
+.hashtags
+	padding-bottom: $gap
+	ul
+		padding-left: 0
+		li
+			display: inline-block
+			font-size: $navitem-font-size
+			margin-left: -$gap
+.category
+	text-transform: uppercase
+	padding: $gap/2 $gap
+.tags
+	padding: $gap/2 $gap
+.uppercase
+	text-transform: uppercase
+
+h1,h2
+	a
+		padding: $gap/2 $gap
+		@extend .negative-gap
+
+
+
+main
+	max-width: $wrap-width
+	padding: 0 $gap
+	@include for-size(xl)
+		max-width: 1500px
+	margin-left: auto
+	margin-right: auto
+
+	article
+		// font-size: 1.5rem
+		text-align: left
+		padding-bottom: $gap
+		display: inline-block
+		h1
+			font-size: $navitem-font-size
+			margin-bottom: $gap
+			line-height: 1.3
+		h2
+			font-size: $navitem-font-size
+			margin-bottom: $gap
+			line-height: 1.3
+		h3
+			line-height: 1.3
+
+.post
+	display: flex
+	flex-direction: column
+	flex: 1 0 0%
+	@include for-size(sm)
+		padding: 0 $gap
+	.post-body
+		flex: 1 1 auto
+	.post-content
+		a
+			display: inline
+			text-decoration: underline
+			&::after 
+				content: ""
+				position: absolute
+				bottom: -$gap/2
+				left: 0px
+				width: 0%
+				height: $underline-size	
+				background: black
+				// transition: all 0.3s ease
+			&:hover
+				width: 100%
+				background-color: black
+			
+
+
+
+.read-more
+	width: 100%
+	text-align: center
+	// border-bottom: 1rem solid black
+	margin-bottom: $gap*3
+
+
+
+footer.footer
+	@extend main
+	img
+		height: 7rem
+
+
+// Výjimky---------------------------------------
+body.about
+	article
+		flex-direction: column
+
+body,.index,.single,.events
+	article
+		display: flex
+		flex-direction: column
+		@include for-size(md)
+			flex-direction: row
+		.post-date
+			flex: 1
+			margin-right: $gap
+
+		.post-body
+			flex: 3
+
+body.people
+	main
+		article
+			h1
+				font-size: $title-font-size
+				margin-bottom: $gap
+				line-height: 1
+
+
+// Čtverce v podcastu
+.podcast,.people
+	#content
+		display: flex
+		flex-wrap: wrap
+		flex-direction: column
+		@include for-size(md)
+			flex-direction: row
+		.post
+			// flex: 0 0 auto
+			min-width: 100%
+			@include for-size(md)
+				min-width: 50%
+
+
+.btn
+	padding: .5rem 1rem
+
+
+.btn2
+	padding: $gap/2 $gap
+	background-color: $black
+	color: $white
+	&:hover
+		background-color: $white
+		color: $black
+
+
+
